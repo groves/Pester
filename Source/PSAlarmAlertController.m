@@ -11,6 +11,7 @@
 #import "PSAlerts.h"
 #import "PSApplication.h"
 #import "NSObject-PerformWhenIdle.h"
+#import <Growl/Growl.h>
 
 NSString * const PSAlarmAlertStopNotification = @"PSAlarmAlertStopNotification";
 
@@ -55,6 +56,7 @@ static NSString * const PSAlarmAlertWaitForIdle = @"PesterAlarmAlertWaitForIdle"
 
 - (void)performAlertsForAlarm:(PSAlarm *)alarm;
 {
+    [GrowlApplicationBridge notifyWithTitle:alarm.message description:@"" notificationName:@"AlarmFinished" iconData:nil priority:0 isSticky:true clickContext:nil];
     PSAlerts *alerts = [alarm alerts];
     NSArray *allAlerts = [alerts allAlerts];
     if ([allAlerts count] == 0) {

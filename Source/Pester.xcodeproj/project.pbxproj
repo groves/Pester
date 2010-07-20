@@ -124,6 +124,9 @@
 		E1B121B40CF639A1004975AA /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B121B30CF639A1004975AA /* QTKit.framework */; };
 		E1D94C8A11473CBA00C88B55 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D94C8911473CBA00C88B55 /* QuickTime.framework */; };
 		E1DE3C15115930BD00C17BB0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1DE3C13115930BD00C17BB0 /* Localizable.strings */; };
+		F2B7998011F60B8700943760 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B7997F11F60B8700943760 /* Growl.framework */; };
+		F2B7999D11F60CCC00943760 /* Growl.framework in Copy Growl.framework */ = {isa = PBXBuildFile; fileRef = F2B7997F11F60B8700943760 /* Growl.framework */; };
+		F2B799B911F611CE00943760 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = F2B799A611F60D9A00943760 /* Growl Registration Ticket.growlRegDict */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +175,17 @@
 				E14AFF3011357B6500DC7922 /* Manip in Copy Perl Modules */,
 			);
 			name = "Copy Perl Modules";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2B7999C11F60CAD00943760 /* Copy Growl.framework */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F2B7999D11F60CCC00943760 /* Growl.framework in Copy Growl.framework */,
+			);
+			name = "Copy Growl.framework";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -305,6 +319,8 @@
 		E1F993C20436280200050002 /* NJRHotKeyField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJRHotKeyField.m; sourceTree = "<group>"; };
 		E1F993C60436310F00050002 /* PSPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPreferencesController.h; sourceTree = "<group>"; };
 		E1F993C70436310F00050002 /* PSPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPreferencesController.m; sourceTree = "<group>"; };
+		F2B7997F11F60B8700943760 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
+		F2B799A611F60D9A00943760 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		F517D63E0356B80C016D68B9 /* PSAlarmsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAlarmsController.m; sourceTree = "<group>"; };
 		F517D63F0356B80C016D68B9 /* PSAlarmsController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PSAlarmsController.h; sourceTree = "<group>"; };
 		F517D6420356B8CC016D68B9 /* PSAlarms.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PSAlarms.m; sourceTree = "<group>"; };
@@ -412,6 +428,7 @@
 				E102D848116EB43A00207746 /* AudioToolbox.framework in Frameworks */,
 				E102D84A116EB43A00207746 /* AudioUnit.framework in Frameworks */,
 				E102D876116EB73100207746 /* ApplicationServices.framework in Frameworks */,
+				F2B7998011F60B8700943760 /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +532,7 @@
 				E19D2D731158181A00B68D9F /* DateCompletions.strings */,
 				F59DD44F0358ABF4017318D0 /* Credits.html */,
 				F59DC6E30353ED1201AEEDB1 /* Application icon.icns */,
+				F2B799A611F60D9A00943760 /* Growl Registration Ticket.growlRegDict */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -522,6 +540,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2B7997F11F60B8700943760 /* Growl.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -834,6 +853,7 @@
 				E1B11F260CF5F30F004975AA /* Resources */,
 				E17CA9A80CF7F89900018B34 /* Copy Perl Modules */,
 				E17562730CF8C55D00FC5057 /* Copy Sparkle.framework */,
+				F2B7999C11F60CAD00943760 /* Copy Growl.framework */,
 			);
 			buildRules = (
 			);
@@ -883,6 +903,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B799B911F611CE00943760 /* Growl Registration Ticket.growlRegDict in Resources */,
 				E19CC5F50CFDEFDB0079DCFC /* libParseDate-10.4.dylib in Resources */,
 				E19CC5F60CFDEFDB0079DCFC /* libParseDate-10.5.dylib in Resources */,
 				E19857B6104F697D0082AC3E /* libParseDate-10.6.dylib in Resources */,
@@ -1308,7 +1329,10 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 36;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Sparkle/build/Release";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Sparkle/build/Release",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1337,7 +1361,10 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 36;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Sparkle/build/Release";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Sparkle/build/Release",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Pester_Prefix.h;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;

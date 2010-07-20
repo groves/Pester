@@ -18,6 +18,7 @@
 #import "PSTimer.h"
 #import "NJRHotKey.h"
 #import "NSWindowCollectionBehavior.h"
+#import <Growl/Growl.h>
 
 NSString * const PSApplicationWillReopenNotification = @"PSApplicationWillReopenNotification";
 
@@ -29,6 +30,7 @@ NSString * const PSApplicationWillReopenNotification = @"PSApplicationWillReopen
 
 - (void)finishLaunching;
 {
+    [GrowlApplicationBridge setGrowlDelegate:@""];
     appIconImage = [[NSImage imageNamed: @"NSApplicationIcon"] retain];
     [[NSNotificationCenter defaultCenter] addObserver: [PSAlarmAlertController class] selector: @selector(controllerWithTimerExpiredNotification:) name: PSAlarmTimerExpiredNotification object: nil];
     [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(nextAlarmDidChange:) name: PSAlarmsNextAlarmDidChangeNotification object: nil];
